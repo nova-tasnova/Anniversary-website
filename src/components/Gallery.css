@@ -1,0 +1,200 @@
+.gallery-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.gallery-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 4rem;
+  font-style: italic;
+}
+
+/* ─── Zigzag Layout ─── */
+.zigzag-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zigzag-row {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+  height: 320px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ─── Photo ─── */
+.zigzag-photo-wrapper {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background: #1a0a14; /* dark fallback for contain padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zigzag-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.zigzag-photo-wrapper:hover .zigzag-photo {
+  transform: scale(1.03);
+}
+
+/* ─── Love Letter Card ─── */
+.love-letter-card {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  background: #fffdf5;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(216, 27, 96, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.love-letter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(216, 27, 96, 0.25);
+}
+
+/* Envelope flap at the top */
+.letter-envelope-top {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, #fce4ec, #f48fb1);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transition: all 0.4s ease;
+}
+
+.love-letter-card.open .letter-envelope-top {
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  background: linear-gradient(135deg, #f48fb1, #e91e63);
+}
+
+/* Letter content */
+.letter-content {
+  flex: 1;
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Closed state */
+.letter-closed-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  animation: gentle-bounce 2s infinite;
+}
+
+.letter-seal {
+  font-size: 3rem;
+}
+
+.letter-closed-hint p {
+  color: #c2185b;
+  font-size: 1rem;
+  font-style: italic;
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+}
+
+/* Open state */
+.letter-text {
+  font-family: var(--font-hand);
+  font-size: 1.7rem;
+  color: #4a0020;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.letter-sign {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-align: right;
+  width: 100%;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ─── Mobile Responsive ─── */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 3rem 0;
+  }
+
+  .zigzag-container {
+    padding: 1rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .zigzag-row,
+  .row-reverse {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .zigzag-photo-wrapper {
+    width: 100%;
+    height: 240px;
+  }
+
+  .love-letter-card {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .letter-envelope-top {
+    height: 50px;
+  }
+
+  .letter-content {
+    padding: 1rem 1.2rem 1.5rem;
+  }
+
+  .letter-text {
+    font-size: 1.3rem;
+  }
+
+  .letter-sign {
+    font-size: 1.2rem;
+  }
+
+  .letter-seal {
+    font-size: 2rem;
+  }
+
+  .letter-closed-hint p {
+    font-size: 1.2rem;
+  }
+}

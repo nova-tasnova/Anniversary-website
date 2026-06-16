@@ -1,0 +1,72 @@
+.story-section {
+  padding: 5rem 2rem;
+}
+
+.story-card {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 64, 129, 0.15);
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Decorative quote mark */
+.story-card::before {
+  content: '\201C';
+  font-family: var(--font-serif);
+  font-size: 8rem;
+  color: rgba(255, 64, 129, 0.12);
+  position: absolute;
+  top: -1.5rem;
+  left: 2rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.story-paragraph {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: var(--primary-light);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.story-divider {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1.8rem 0;
+  opacity: 0.7;
+}
+
+.story-signature {
+  font-family: var(--font-hand);
+  font-size: 2rem;
+  color: var(--primary-light);
+  text-align: right;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 64, 129, 0.15);
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .story-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .story-card::before {
+    font-size: 5rem;
+  }
+}

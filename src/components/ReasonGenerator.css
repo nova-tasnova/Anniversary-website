@@ -1,0 +1,94 @@
+.reason-section {
+  padding: 5rem 2rem;
+}
+
+.reason-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.reason-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reason-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+}
+
+.reason-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(216, 27, 96, 0.6);
+}
+
+.sparkle-icon {
+  animation: pulse 1.5s infinite;
+}
+
+.reason-display {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-text {
+  font-size: 1.8rem;
+  font-family: var(--font-hand);
+  color: var(--primary-light);
+  line-height: 1.3;
+}
+
+.reason-placeholder {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .reason-section {
+    padding: 3rem 1rem;
+  }
+  .reason-card {
+    padding: 2rem 1.5rem;
+  }
+  .reason-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  .reason-text {
+    font-size: 1.4rem;
+  }
+  .reason-subtitle {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+}

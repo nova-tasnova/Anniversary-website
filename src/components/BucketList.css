@@ -1,0 +1,55 @@
+.bucket-section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.bucket-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.bucket-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.bucket-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bucket-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bucket-item:last-child {
+  margin-bottom: 0;
+}
+
+.bucket-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.bucket-text {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bucket-item.completed .bucket-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
