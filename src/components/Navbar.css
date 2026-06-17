@@ -33,7 +33,7 @@
 }
 
 .navbar-links li {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-main);
   cursor: pointer;
@@ -64,7 +64,7 @@
     justify-content: center;
   }
   .navbar-links li {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     letter-spacing: 0;
     padding-bottom: 2px;
   }
@@ -75,12 +75,12 @@
     gap: 0.4rem 0.8rem;
   }
   .navbar-links li {
-    font-size: 0.65rem;
+    font-size: 0.73rem;
   }
 }
 
 @media (max-width: 360px) {
   .navbar-links li {
-    font-size: 0.58rem;
+    font-size: 0.63rem;
   }
 }
