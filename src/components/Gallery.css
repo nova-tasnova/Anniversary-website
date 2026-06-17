@@ -166,12 +166,14 @@
   .zigzag-photo-wrapper {
     width: 100%;
     height: 240px;
+    flex: none;
   }
 
   .love-letter-card {
     width: 100%;
     height: auto;
     min-height: 180px;
+    flex: none;
   }
 
   .letter-envelope-top {

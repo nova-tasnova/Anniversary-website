@@ -21,8 +21,9 @@ const captions = [
   "Tomar jnno Dhakar rasta thele tomake welcome korte gesi...xoss ekta gf paiso bhai🏆",
   "The pictures tells everything. i should be your bf and you should be my gf..hihi",
   "Tomar oi bangles ami jotno kore as a memories raksi.hehe",
-  "My best day in my life. I needed that day",
+  
   "You are my home, my safe place jar kadhe math rekhe sob dukkho kosto vule jaite iccha kore..sotti ghum chole ase.hehe❤️ ",
+  "My best day in my life. I needed that day",
   "Natto!! ektu tumio sundr aso..jao complimennt diye dsi",
   "Again it's my safe place. Maybe i feel safe, loved and no worries in life just beside with you🙃",
   "Best couple picture ever.My fav..My wallpaper too",
