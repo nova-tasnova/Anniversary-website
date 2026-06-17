@@ -1,21 +1,15 @@
 import React from 'react';
 import './Navbar.css';
 
-export default function Navbar() {
-  const scrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+export default function Navbar({ activePage, setActivePage }) {
   return (
     <nav className="navbar">
-      <div className="navbar-container container">
-        <ul className="navbar-links" style={{ width: '100%', justifyContent: 'flex-end' }}>
-          <li onClick={() => scrollTo('gallery')}>Gallery</li>
-          <li onClick={() => scrollTo('timeline')}>Our Story</li>
-          <li onClick={() => scrollTo('reasons')}>Reasons</li>
+      <div className="navbar-container container" style={{ justifyContent: 'flex-end' }}>
+        <ul className="navbar-links">
+          <li className={activePage === 'home' ? 'active' : ''} onClick={() => setActivePage('home')}>Home</li>
+          <li className={activePage === 'gallery' ? 'active' : ''} onClick={() => setActivePage('gallery')}>Gallery</li>
+          <li className={activePage === 'story' ? 'active' : ''} onClick={() => setActivePage('story')}>Our Story</li>
+          <li className={activePage === 'reasons' ? 'active' : ''} onClick={() => setActivePage('reasons')}>Reasons</li>
         </ul>
       </div>
     </nav>
