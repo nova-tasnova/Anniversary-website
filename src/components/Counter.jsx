@@ -16,19 +16,38 @@ export default function Counter() {
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date();
-      const difference = now.getTime() - startDate.getTime();
-
-      const seconds = Math.floor((difference / 1000) % 60);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       
-      const years = Math.floor(days / 365);
-      const remainingDays = days % 365;
-      const months = Math.floor(remainingDays / 30);
-      const exactDays = remainingDays % 30;
+      let years = now.getFullYear() - startDate.getFullYear();
+      let months = now.getMonth() - startDate.getMonth();
+      let days = now.getDate() - startDate.getDate();
+      let hours = now.getHours() - startDate.getHours();
+      let minutes = now.getMinutes() - startDate.getMinutes();
+      let seconds = now.getSeconds() - startDate.getSeconds();
 
-      setTimeLeft({ years, months, days: exactDays, hours, minutes, seconds });
+      if (seconds < 0) {
+        minutes--;
+        seconds += 60;
+      }
+      if (minutes < 0) {
+        hours--;
+        minutes += 60;
+      }
+      if (hours < 0) {
+        days--;
+        hours += 24;
+      }
+      if (days < 0) {
+        months--;
+        // Get the number of days in the previous month
+        const prevMonthDate = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonthDate.getDate();
+      }
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      setTimeLeft({ years, months, days, hours, minutes, seconds });
     }, 1000);
 
     return () => clearInterval(timer);
